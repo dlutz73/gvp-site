@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:700|Play:700|Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src="/script/jquery-1.11.3.min.js"></script>
+    <title>@ViewBag.Title</title>
+    @RenderSection("pageCSS", false)
+</head>
+<body class="basic-page-content">
+    <div class="section header">
+        @Html.Partial("TitleBarAndNav")
+        <div class="content">
+            <div class="maintitle">
+                <h1>@ViewBag.Title</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section ">
+        <div class="content page-content">
+            @RenderBody()
+            <div class="page-body-spacer"></div>
+        </div>
+    </div>
+
+    @Html.Partial("Footer")
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:700|Play:700|Hammersmith+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src="/script/jquery-1.11.3.min.js"></script>
+    <title>@ViewBag.Title</title>
+    @RenderSection("pageCSS", false)
+</head>
+<body>
+    <div class="section header">
+        @Html.Partial("TitleBarAndNav")
+        <div class="content">
+            <div class="maintitle">
+                @RenderSection("GameTitle")
+            </div>
+
+        </div>
+        <div class="get">
+            <div class="content">
+                @RenderSection("PurchaseButtons", false)
+            </div>
+        </div>
+    </div>
+    <div class="section video">
+        @RenderSection("YouTubeVid", true)
+    </div>
+    <div class="section concept">
+        <div class="title">Concept & Design</div>
+        <div class="content">
+            @RenderSection("Concept", true)
+        </div>
+    </div>
+    <div class="section production">
+        <div class="title">Production</div>
+        <div class="content">
+            @RenderSection("Production", true)
+        </div>
+    </div>
+    <div class="section release">
+        <div class="title">Release</div>
+        <div class="content">            
+            @RenderSection("Release", true)
+        </div>
+        <div class="footer-gradient"></div>
+    </div>
+
+    @Html.Partial("Footer")
+</body>
+</html>
