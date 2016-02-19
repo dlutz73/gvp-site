@@ -1,0 +1,402 @@
+﻿
+body { 
+    background-color:#000;
+    font-family: Arial;
+}
+
+.basic-page-content .header {height:250px;}
+.basic-page-content .content { color:#fff; }
+.basic-page-content h2 { 
+    font-family:'Play', sans-serif; 
+    font-size:2.1em;
+}
+.section .page-content { 
+    width: 85%;
+    max-width:700px;
+}
+.page-body-spacer { width:100%; height:110px;}
+body, div {
+    margin:0; padding:0; 
+}
+
+.section {
+    min-height: 300px;
+    width: 100%;
+    margin:0;
+    overflow:hidden;
+    position:relative;
+    border-top: 5px solid black;
+    z-index:0;
+}
+
+.content, .title {
+    margin: 25px auto;
+    width: 95%;
+    max-width:800px;
+    z-index:2;
+    position:relative;
+}
+
+.header {
+    background-color: #000;
+    color: #ffffff;
+    background-image: url("/img/alpha.gif"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+    height: 600px;
+    z-index:90;
+    overflow:visible;
+}
+
+.nav  {
+    position: absolute;
+    top: 100px;
+    background-color: #000;
+    color: #FF2600;
+    height: 60px;
+    width: 100%;
+    border-bottom:3px solid #ddd;
+    z-index: 4;
+}
+
+.title-bar { 
+    height:75px;  
+    position:absolute; 
+    top:25px; 
+    width:100%; 
+    background-color:#fff; 
+}
+
+.title-bar-content { 
+    height:75px; 
+    font-family:'Play', sans-serif; 
+    font-size:65px; 
+    color:#000; 
+    margin:0 auto; 
+    width:95%; 
+    max-width:800px;
+    position:relative; 
+}
+
+.longer { 
+    width:530px !important; 
+}
+
+.title-bar-content span {  
+    display:block; 
+    position:relative; 
+    height:75px; 
+    width:15%;  
+    float:left; 
+    z-index:8; 
+}
+
+.nav a:link, a:visited, a:hover, a:active {
+     color: #FF2600;
+     text-decoration: none;
+}
+
+.navcontent {
+    margin:0 auto;
+    width: 95%;
+    max-width:800px;
+    z-index:5;
+    height: 60px;
+    position:relative;
+}
+
+.navcontent span {
+    display:block;
+    position:relative;
+    height:60px;
+    width:15%; 
+    float:left;
+    line-height:60px;
+}
+
+.navlogo {
+    margin-right: 30px;
+}
+
+img.navlogo  { 
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    max-width:125px;
+    width:110%;
+}
+
+.navtext {
+    height:60px;
+    font-size: 2.2em;
+    font-family: 'Play', sans-serif;
+    margin-right: 75px;
+    cursor: pointer;
+}
+
+.navgames {
+    display:none;
+    position: absolute;
+    background-color: #fff;
+    color: white;
+    height: 170px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    border-bottom:3px solid #000;
+}
+
+.navgames img {
+    height: 125px;
+    width:89px;
+    margin: 15px;
+    vertical-align: middle;
+}
+.navgames a img { border:2px solid #000; }
+.navgames a:hover img { border:2px solid #ccc; }
+
+
+.maintitle {
+    position: absolute;
+    top: 225px;
+    background-color: #000;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 3.6em;
+    color: #000;
+    -webkit-text-stroke: 1.8px #000000;
+    -webkit-text-fill-color: #FFFFFF
+}
+
+h1 .smaller-title { display:block; font-size:0.4em; font-weight:normal; margin-top:-10px;}
+
+.get {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width:100%;
+}
+
+.get img {
+        float:right;
+        max-height:60px;
+        margin-left: 10px;
+}
+
+.video {
+    background-color: #000;
+}
+
+.mobile-video {
+    display: none;
+} 
+
+.concept {
+    background-color: #fff;
+    background-image: url("/img/graph_paper_horizontal.jpg");
+    background-size: cover;
+}
+
+.concept .text-cell {
+    background: rgba(255, 255, 255, .6);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.production {
+    background-color: #e5e4b6;
+    background-image: url("/img/chimp/production_blur.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.production .content {
+    background-color: rgba(225, 225, 225, .5);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.release {
+    background-color: #808080;
+    color: #ffffff;
+    background-image: url("/img/chimp/release_blur.jpg");    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.get-release {
+    position: relative;
+    height: 80px;
+    bottom: auto;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    max-height: 100px;
+    overflow:hidden;
+}
+.footer-gradient { 
+    position:absolute; 
+    left:0; 
+    bottom:0; 
+    height:100px;
+    width:100%;
+    background: url("/img/footer.png") bottom left repeat-x transparent;
+    z-index:0;
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    }
+
+.clear {
+    clear: both;
+}
+
+.grid {
+    display: table;
+    margin: 5px;
+}
+
+.row {
+    display: inline-block;
+    width: 45%; 
+}
+
+.img-cell {
+    display: table-cell;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 24%;
+    padding: 0 15px;
+}
+.img-cell img {
+    width:99%;
+    min-width: 150px;
+}
+
+.imgright {
+    /*http://bennettfeely.com/clippy/*/
+    -webkit-clip-path: polygon(6% 3%, 12% 5%, 21% 6%, 31% 5%, 39% 4%, 53% 4%, 62% 8%, 73% 5%, 85% 4%, 94% 5%, 98% 6%, 94% 25%, 91% 44%, 93% 61%, 98% 72%, 98% 91%, 97% 99%, 87% 100%, 71% 98%, 63% 96%, 52% 99%, 48% 99%, 39% 98%, 38% 100%, 27% 96%, 16% 99%, 11% 100%, 6% 98%, 1% 93%, 1% 84%, 4% 69%, 9% 34%);
+    clip-path: polygon(6% 3%, 12% 5%, 21% 6%, 31% 5%, 39% 4%, 53% 4%, 62% 8%, 73% 5%, 85% 4%, 94% 5%, 98% 6%, 94% 25%, 91% 44%, 93% 61%, 98% 72%, 98% 91%, 97% 99%, 87% 100%, 71% 98%, 63% 96%, 52% 99%, 48% 99%, 39% 98%, 38% 100%, 27% 96%, 16% 99%, 11% 100%, 6% 98%, 1% 93%, 1% 84%, 4% 69%, 9% 34%);
+    -ms-transform: rotate(9deg); /* IE 9 */
+    -webkit-transform: rotate(9deg); /* Chrome, Safari, Opera */
+    transform: rotate(9deg);
+}
+
+.imgleft {
+    /*http://bennettfeely.com/clippy/*/
+    -webkit-clip-path: polygon(6% 3%, 12% 5%, 21% 6%, 31% 5%, 39% 4%, 53% 4%, 62% 8%, 73% 5%, 85% 4%, 94% 5%, 98% 6%, 94% 25%, 91% 44%, 93% 61%, 98% 72%, 98% 91%, 97% 99%, 87% 100%, 71% 98%, 63% 96%, 52% 99%, 48% 99%, 39% 98%, 38% 100%, 27% 96%, 16% 99%, 11% 100%, 6% 98%, 1% 93%, 1% 84%, 4% 69%, 9% 34%);
+    clip-path: polygon(6% 3%, 12% 5%, 21% 6%, 31% 5%, 39% 4%, 53% 4%, 62% 8%, 73% 5%, 85% 4%, 94% 5%, 98% 6%, 94% 25%, 91% 44%, 93% 61%, 98% 72%, 98% 91%, 97% 99%, 87% 100%, 71% 98%, 63% 96%, 52% 99%, 48% 99%, 39% 98%, 38% 100%, 27% 96%, 16% 99%, 11% 100%, 6% 98%, 1% 93%, 1% 84%, 4% 69%, 9% 34%);
+    -ms-transform: rotate(-9deg); /* IE 9 */
+    -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+    transform: rotate(-9deg);
+}
+
+.text-cell {
+    display: table-cell;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 24%;
+    min-width: 175px;
+}
+
+li {
+    display: inline;
+}
+.media a { text-decoration:none; }
+.media a img {
+    width: 35px;
+    border:none;
+}
+
+#ytplayer { width:100%; height:600px; border:none;}
+
+h1 { font-size: 300%;
+     margin: 0;
+}
+
+h2 { font-size: 75%;
+     margin: 0;;
+}
+
+h3 {
+    font-family: 'Play', sans-serif;
+}
+
+.box {
+    float: left;
+    padding-bottom: 20px;
+    max-height: 235px;
+    width: 22.125%;
+}
+
+.box img {
+    height: 227px;
+    border: 4px solid rgba(000,000,000,.4);
+}
+
+.mobile-release {
+    display: none;
+}
+
+.gallery-close { 
+    position:absolute; 
+    top:20px; 
+    right:30px; 
+    width:45px; 
+    height:45px; 
+    z-index:99999; 
+}
+
+.gallery-close img { 
+    width:100%; 
+}
+
+.gallery { 
+    display:none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    z-index:9999; 
+    text-align:center; 
+    background: rgba(0, 0, 0, .85); 
+}
+
+.gallery img {  
+    object-fit:contain; 
+    max-height:90%;
+    margin:30px;  
+}
+
+.galleryDisplay {
+    float: right;
+    display: block;
+    padding-bottom: 20px;
+    width: 75%;
+    text-align: right;
+}
+
+.galleryDisplay div a img { 
+    width:22%; 
+    max-height:90px;
+    border: 4px solid rgba(000,000,000,.4);
+}
+
+.galleryDisplay div a img:hover { 
+    border: 4px solid rgba(255,255,255,1);
+}

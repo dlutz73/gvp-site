@@ -1,0 +1,161 @@
+﻿
+body { 
+    background-color:#fff;
+    font-family: Arial;
+    font-size: 1.5em;
+}
+
+.concept, .production, .release {
+    background-image: none !important;
+    background-color: #fff !important;
+}
+
+.section .content {
+    background-color: #fff;
+}
+
+.maintitle {
+    color: #fff;
+}
+
+.title {
+    -webkit-text-stroke: none;
+    -webkit-text-fill-color: #000;
+}
+
+
+.nav  {
+    height: 75px;
+}
+
+.title-bar { 
+    height:75px;  
+}
+
+.title-bar-content { 
+    height:75px; 
+    font-size:65px; 
+}
+
+.navcontent {
+    height: 75px;
+
+}
+
+.navcontent span {
+    height:75px;
+}
+
+img.navlogo  { 
+    position:absolute;
+    top:-5px;
+    transform: initial;
+    min-width:150px;
+    width:110%;
+}
+
+.navtext {
+    height:75px;
+    font-size: 2.2em;
+    color: #fff;
+}
+
+.nav a:link, a:visited, a:hover, a:active {
+     color: #fff;
+     text-decoration: none;
+}
+
+.navgames {
+    height: 360px;
+}
+
+.navgames img {
+    height: 310px;
+    width:220px;
+    margin: 25px;
+    vertical-align: middle;
+}
+
+.get .content {
+    background-color: transparent;
+}
+
+.video {
+    display: none;
+}
+
+.mobile-video {
+    display: block;
+}
+
+.mobile-video img {
+    width: 95%;
+}
+
+.row {
+    display: inline-block;
+    width: 95%; 
+}
+
+.imgright {
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.imgleft {
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.get {
+    text-align: center;
+}
+
+.get img {
+    float: none;
+    display: inline;
+}
+
+.text-cell {
+    background: none !important;
+    font-size: 1.7em;
+}
+
+.release .content {
+    background-color: transparent;
+}
+
+.release {
+    display: none;
+}
+
+.mobile-release {
+    display: block;
+}
+
+.footer-gradient {
+    display: none;
+}
+
+/*body {
+    background-color: #000;
+}
+
+.concept, .production, .release {
+    background-image: none !important;
+    background-color: #000 !important;
+    color: #eee;
+}
+
+
+.section, .section .content, .mobile-video {
+    background-color: #000;
+    color: #eee;
+}
+.section .title {
+    -webkit-text-fill-color: #fff;
+}
+
+*/
