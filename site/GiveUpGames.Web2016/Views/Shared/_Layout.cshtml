@@ -4,9 +4,21 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Dosis:700|Play:700|Hammersmith+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 750px)" href="/css/small-device.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <script type="text/javascript" src="/script/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <title>@ViewBag.Title</title>
     @RenderSection("pageCSS", false)
+    <style>
+        .carousel { width: 90%;
+                    margin: 0 auto;
+        }
+        .carousel-inner > .item > img {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <div class="section header">
@@ -25,6 +37,13 @@
     </div>
     <div class="section video">
         @RenderSection("YouTubeVid", true)
+    </div>
+    <div class="section mobile-video">
+        <div class="content">
+            <div class="title">Game Trailer</div>
+            @RenderSection("MobileVideo", true)
+        </div>
+
     </div>
     <div class="section concept">
         <div class="title">Concept & Design</div>
@@ -45,7 +64,61 @@
         </div>
         <div class="footer-gradient"></div>
     </div>
+    <div class="section mobile-release">
+        <div class="title">Gallery</div>
+        <div class="content">
+            <div id="galleryCarousel" class="carousel slide">
+                @RenderSection("Gallery", true)
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#galleryCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#galleryCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        @RenderSection("MobileGet", true)
+    </div>
 
     @Html.Partial("Footer")
+
+    <div class="gallery">
+        <img class="actual-image" src="#" />
+        <div class="gallery-close"><img src="img/closeButton.png" /></div>
+    </div>
+    <script>
+        var gameButtonState = false;
+        $(document).ready(function () {
+            function InitGiveUpGallery(parentSelector) {
+                var firstImage = $(parentSelector + ' div a img').eq(0);
+                var imageDisplay = $('div.gallery img.actual-image');
+                var imageDisplayContainer = $('div.gallery');
+                var closeButton = $('.gallery-close');
+                imageDisplay.attr('src', firstImage.attr('src'));
+                $(parentSelector + ' div a').click(function () {
+                    imageDisplayContainer.slideDown();
+                    imageDisplay.attr('src', $(this).attr('href'));
+                    return false;
+                });
+                closeButton.click(function () {
+                    imageDisplayContainer.slideUp();
+                    return false;
+                });
+            }
+            InitGiveUpGallery('.galleryDisplay');
+            $('.gamebutton').click(function () {
+                if (gameButtonState === false) {
+                    $('.navgames').slideDown();
+                } else {
+                    $('.navgames').slideUp();
+                }
+                gameButtonState = !gameButtonState;
+            });
+        });
+    </script>
 </body>
 </html>
